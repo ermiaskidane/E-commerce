@@ -50,7 +50,7 @@ const ProductList = async ({
 }
   
   const res = await productQuery.find();
-  console.log("Query Results:", res);
+  // console.log("Query Results:", res);
   
 
 

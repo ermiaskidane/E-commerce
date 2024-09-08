@@ -16,6 +16,7 @@ const CartModal = () => {
   const handleCheckout = async () => {
     try {
       const checkout =
+      // of all the 12 enum channels we go with "WEB"(https://dev.wix.com/docs/sdk/backend-modules/ecom/current-cart/create-checkout-from-current-cart)
         await wixClient.currentCart.createCheckoutFromCurrentCart({
           channelType: currentCart.ChannelType.WEB,
         });

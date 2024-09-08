@@ -38,7 +38,16 @@ npm install @wix/stores
 - head over to [setting](https://manage.wix.com/dashboard/<Your-Dashboard-ID>/settings?referralInfo=sidebar) then go to `headless-settings` click the `Create OAuth App` then fetch your `clientId` there.
 
 - `npm install js-cookie` and `npm i isomorphic-dompurify`
-- To implement the [WIX-SDK](https://dev.wix.com/docs/sdk/backend-modules/stores/products/introduction)
+- To implement the head over to [WIX-SDK](https://dev.wix.com/docs/sdk/backend-modules/stores/products/introduction)
 
 - Authentication in wixHeadless can be done in [setting](https://manage.wix.com/dashboard/<Your-Dashboard-ID>/oauth-apps-settings) click 3 points followed the `setting` then which you fill the `Allowed direct domain and Allowed authorization redirect URIs`
 - continoue to [JavaScript-SDK](https://dev.wix.com/docs/go-headless/coding/java-script-sdk/visitors-and-members/handle-members-with-custom-login)
+
+- utilize [currentCart](https://dev.wix.com/docs/sdk/backend-modules/ecom/current-cart/setup) to work with our cart modals
+
+## Wix Payment setup
+
+First upgrade the wix studio to premium plan so that owners can sell products.
+
+- choose the `WEB` channel from [createCheckoutFromCurrentCart](https://dev.wix.com/docs/sdk/backend-modules/ecom/current-cart/create-checkout-from-current-cart) as we utilize in `/src/components/CartModal.tsx`
+- After client use the checkout payment, need redirect [redirect](https://dev.wix.com/docs/sdk/backend-modules/redirects/redirects/create-redirect-session) but need to install `npm install @wix/redirects` before then pass to `createClient` of the `@wix/sdk` inside `src/context/wixContext.tsx`

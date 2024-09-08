@@ -38,6 +38,8 @@ export const useCartStore = create<CartState>((set) => ({
       lineItems: [
         {
           catalogReference: {
+            // fetch this Id from (https://dev.wix.com/docs/sdk/backend-modules/ecom/current-cart/add-to-current-cart)
+            // by click the `show child property`
             appId: process.env.NEXT_PUBLIC_WIX_APP_ID!,
             catalogItemId: productId,
             ...(variantId && { options: { variantId } }),
