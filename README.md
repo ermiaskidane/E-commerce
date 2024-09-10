@@ -51,3 +51,10 @@ First upgrade the wix studio to premium plan so that owners can sell products.
 
 - choose the `WEB` channel from [createCheckoutFromCurrentCart](https://dev.wix.com/docs/sdk/backend-modules/ecom/current-cart/create-checkout-from-current-cart) as we utilize in `/src/components/CartModal.tsx`
 - After client use the checkout payment, need redirect [redirect](https://dev.wix.com/docs/sdk/backend-modules/redirects/redirects/create-redirect-session) but need to install `npm install @wix/redirects` before then pass to `createClient` of the `@wix/sdk` inside `src/context/wixContext.tsx`
+- To get current [User](https://dev.wix.com/docs/sdk/backend-modules/members/members/get-current-member) and Order history utilize [Order](https://dev.wix.com/docs/sdk/backend-modules/ecom/orders/get-order)
+
+- To get the review we can follow [review](https://dev.wix.com/docs/sdk/backend-modules/reviews/introduction) but it is under developer preview so head over to [resources](https://manage.wix.com/app-market?referral=my-account-header) menu of the dashboard and choose `App Market`
+  - search for `reviews` choose with high rating add it and find it [wix-manage-dashboard](https://manage.wix.com/dashboard/<Your-Dashboard-ID>/fera-product-reviews?referralInfo=sidebar) in the apps menu
+- Get the `API_KEY` from [setting](https://manage.wix.com/dashboard/<Your-Dashboard-ID>/fera-product-reviews?referralInfo=sidebar)
+- This `review` package got private api and public api. Utilize private if to implement inside the website, if to sending by email utilize the public api.
+- Get the `reviews` docs [here](https://developers.fera.ai/reference/list-reviews-1)
