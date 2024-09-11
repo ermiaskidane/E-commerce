@@ -8,7 +8,8 @@ import { format } from "timeago.js";
 const ProfilePage = async () => {
   const wixClient = await wixClientServer();
 
-  // console.log("dsfsd", wixClient)
+  //  due to this error ""message": "Missing site member id: UNKNOWN","
+  // I had to use try and catch method to by pass the `production mode` barrier
 
   try {
     const user = await wixClient.members.getCurrentMember({
